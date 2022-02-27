@@ -1,0 +1,109 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../assets/drawing-pad.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(182, 182, 179);
+    margin-left: 6rem;
+    margin-right: 14rem;
+    font-size: 1rem;
+    font-family: "Comfortaa", cursive;
+}
+
+main {
+    margin-top: 3rem;
+    text-decoration: none;
+    margin-right: 10rem;
+    margin-left: 2rem;
+}
+
+li {
+    margin-top: 1rem;
+    list-style: none;
+}
+
+h1 {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    text-align: right;
+    text-decoration: underline;
+    color: rgb(54, 53, 46);
+    font-size: 1.5rem;
+    font-family: "Comfortaa", cursive;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: underline;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.formulario--size {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    font-family: "Caveat", cursive;
+    text-align: center;
+    color: #555;
+}
+
+input {
+    font-family: "Caveat", cursive;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    box-shadow: inset 8px 8px 8px #cbced1 , inset -8px -8px 8px #ffffff;
+}
+
+.form-control {
+    margin-top: 1rem;
+    font-family: "Caveat", cursive;
+    border-radius: 2rem;
+    transition: all 1s;
+    width: 10rem;
+    height: 2rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 20px 10px 20px 5px;
+    
+}
+
+.form-control:focus {
+    font-size: 1.2em;
+    border: 0.1rem dotted black;
+    color: black;
+}
+
+label>.fContacto {
+    font-size: 1rem;
+    font-family: "Caveat", cursive;
+}
+label>.btn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+    display: grid;
+    justify-items: center;
+
+
+}
+.btn:focus {
+    font-size: 1rem;
+    transform: scale(1.2);
+    transition: all 1s ;
+}
