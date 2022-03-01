@@ -47,43 +47,43 @@ for (let i = 1; i <= 3; i += 1) {
 
     alert(
         ` Alumnno  N° ${i}\n Nombre: ${ingresarNombre}\n Apellido: ${apellidoIngresado}\n Nota 1: ${ingresarNota1}\n Nota 2: ${ingresarNota2}\n Nota 3: ${ingresarNota3}\n Resultado de Notas : ${
-      ingresarNota1 + ingresarNota2 + ingresarNota3
+    ingresarNota1 + ingresarNota2 + ingresarNota3
     }\n Nota Final : ${redondeo(total / 3)}`
     );
 
     console.log(
         ` Alumnno  N° ${i}\n Nombre: ${ingresarNombre}\n Apellido: ${apellidoIngresado}\n Nota 1: ${ingresarNota1}\n Nota 2: ${ingresarNota2}\n Nota 3: ${ingresarNota3}\n Resultado de Notas : ${
-      ingresarNota1 + ingresarNota2 + ingresarNota3
+    ingresarNota1 + ingresarNota2 + ingresarNota3
     }\n Nota Final : ${redondeo(total / 3)}`
     );
 
     /*    document.write(
-          " Alumnno  N° " +
-          i +
-      "<br>" +
-      " Nombre: " +
-      ingresarNombre +
-      "<br>" +
-      " Apellido: " +
-      apellidoIngresado +
-      "<br>" +
-      " Nota 1: " +
-      ingresarNota1 +
-      "<br>" +
-      " Nota 2: " +
-      ingresarNota2 +
-      "<br>" +
-      " Nota 3: " +
-      ingresarNota3 +
-      "<br>" +
-      " Resultado de Notas : " +
-      (ingresarNota1 + ingresarNota2 + ingresarNota3) +
-      "<br>" +
-      " Nota Final : " +
-      redondeo(total / 3) +
-      "<br>" +
-      "<hr>"
-      ); */
+            " Alumnno  N° " +
+            i +
+        "<br>" +
+        " Nombre: " +
+        ingresarNombre +
+        "<br>" +
+        " Apellido: " +
+        apellidoIngresado +
+        "<br>" +
+        " Nota 1: " +
+        ingresarNota1 +
+        "<br>" +
+        " Nota 2: " +
+        ingresarNota2 +
+        "<br>" +
+        " Nota 3: " +
+        ingresarNota3 +
+        "<br>" +
+        " Resultado de Notas : " +
+        (ingresarNota1 + ingresarNota2 + ingresarNota3) +
+        "<br>" +
+        " Nota Final : " +
+        redondeo(total / 3) +
+        "<br>" +
+        "<hr>"
+        ); */
 
     const alumnos = [{
         id: 0,
