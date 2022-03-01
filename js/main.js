@@ -16,7 +16,7 @@ formulario.addEventListener("submit", validarFormulario);
 
 function validarFormulario(e) {
     e.preventDefault();
-    console.log("Formulario Enviado");
+    console.log("Calculando notas");
 }
 
 const header = document.createElement("header");
