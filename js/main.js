@@ -49,19 +49,12 @@ function validarFormulario(e) {
 
         let total = Number(notaUno) + Number(notaDos) + Number(notaTres) / 3;
 
-
         if (!isNaN(nombre, apellido)) {
             alert("Ingresar nombres con letras!");
         }
         if (Number.isNaN(notaUno, notaDos, notaTres)) {
             alert("Ingresar notas numericas!");
         }
-
-        /*   alert(
-                ` Alumnno  N° ${i}\n Nombre: ${ingresarNombre}\n Apellido: ${apellidoIngresado}\n Nota 1: ${ingresarNota1}\n Nota 2: ${ingresarNota2}\n Nota 3: ${ingresarNota3}\n Resultado de Notas : ${
-            ingresarNota1 + ingresarNota2 + ingresarNota3
-            }\n Nota Final : ${redondeo(total / 3)}`
-              ); */
 
         console.log(
             ` Alumnno  N° ${i}\n Nombre: ${nombre}\n Apellido: ${apellido}\n Nota 1: ${notaUno}\n Nota 2: ${notaDos}\n Nota 3: ${notaTres}\n Nota Final : ${redondeo(
@@ -99,5 +92,38 @@ function validarFormulario(e) {
             li.innerHTML = persona;
             list.appendChild(li);
         }
+
+        /* ----------------------------------------- Storage and Json -------------------------------------------- */
+
+        const guardarLocal = (clave, valor) => {
+            localStorage.setItem(clave, valor)
+        }
+        for (const alumno of alumnos) {
+            guardarLocal(alumno.id, JSON.stringify(alumno))
+        }
+        guardarLocal("Nombre", JSON.stringify(alumnos));
+
+
+        const aprobadosToJson = JSON.stringify(aprobados);
+        console.log(aprobadosToJson);
+        console.log(aprobados);
+
+        const desaprobadosToJson = JSON.stringify(desaprobados);
+        console.log(desaprobadosToJson);
+        console.log(desaprobados);
+
+        localStorage.setItem("Aprovados", aprobadosToJson);
+
+        localStorage.setItem("Desaprovados", desaprobadosToJson);
+
+        let a = localStorage.getItem("Aprovados");
+        console.log(a);
+        let objA = JSON.parse(a);
+        console.log(objA);
+
+        let d = localStorage.getItem("Desaprovados");
+        console.log(d);
+        let objD = JSON.parse(d);
+        console.log(objD);
     }
 }
