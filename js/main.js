@@ -48,7 +48,7 @@ function validarFormulario(e) {
         let notaTres = document.getElementById("notaTres").value;
 
         let total = Number(notaUno) + Number(notaDos) + Number(notaTres) / 3;
-        //var resultado = Number(numero1)+Number(numero2);
+
 
         if (!isNaN(nombre, apellido)) {
             alert("Ingresar nombres con letras!");
