@@ -112,16 +112,16 @@ function validarFormulario(e) {
         console.log(desaprobadosToJson);
         console.log(desaprobados);
 
-        localStorage.setItem("Aprovados", aprobadosToJson);
+        localStorage.setItem("Aprobados", aprobadosToJson);
 
-        localStorage.setItem("Desaprovados", desaprobadosToJson);
+        localStorage.setItem("Desaprobados", desaprobadosToJson);
 
-        let a = localStorage.getItem("Aprovados");
+        let a = localStorage.getItem("Aprobados");
         console.log(a);
         let objA = JSON.parse(a);
         console.log(objA);
 
-        let d = localStorage.getItem("Desaprovados");
+        let d = localStorage.getItem("Desaprobados");
         console.log(d);
         let objD = JSON.parse(d);
         console.log(objD);
