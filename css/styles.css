@@ -37,7 +37,7 @@ h1 {
   text-align: right;
   text-decoration: underline;
   color: #36352e;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: "Comfortaa", cursive;
 }
 
@@ -47,6 +47,15 @@ h2 {
   text-decoration: underline;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+#respuesta {
+  text-align: center;
+  font-size: 1.4rem;
+  text-decoration: underline;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
 }
 
 .formulario--size {

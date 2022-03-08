@@ -42,9 +42,7 @@ function validarFormulario(e) {
         let nombre = document.getElementById("nombre").value;
         let apellido = document.getElementById("apellido").value;
         let notaUno = document.getElementById("notaUno").value;
-
         let notaDos = document.getElementById("notaDos").value;
-
         let notaTres = document.getElementById("notaTres").value;
 
         let total = Number(notaUno) + Number(notaDos) + Number(notaTres) / 3;
@@ -59,7 +57,7 @@ function validarFormulario(e) {
         console.log(
             ` Alumnno  N° ${i}\n Nombre: ${nombre}\n Apellido: ${apellido}\n Nota 1: ${notaUno}\n Nota 2: ${notaDos}\n Nota 3: ${notaTres}\n Nota Final : ${redondeo(
         total / 3
-        )}`
+      )}`
         );
 
         let personas = [
@@ -74,15 +72,15 @@ function validarFormulario(e) {
 
         const alumnos = [{
             id: 0,
-            Nombre: nombre,
+            nombre: nombre,
             apellido: apellido,
-            Nota: redondeo(total / 3),
+            nota: redondeo(total / 3),
         }, ];
 
-        const aprobados = alumnos.filter((alumnos) => alumnos.Nota >= 6);
+        const aprobados = alumnos.filter((alumnos) => alumnos.nota >= 6);
         console.log(aprobados);
 
-        const desaprobados = alumnos.filter((alumnos) => alumnos.Nota <= 5);
+        const desaprobados = alumnos.filter((alumnos) => alumnos.nota <= 5);
         console.log(desaprobados);
 
         let list = document.getElementById("alumnos");
@@ -93,16 +91,79 @@ function validarFormulario(e) {
             list.appendChild(li);
         }
 
+        /* -------------------------------------------------------operadores avanzados--------------------------------------------------------- */
+
+        const estudiante = {
+            nombre: nombre,
+            apellido: apellido,
+            nota: redondeo(total / 3),
+        };
+
+        const condicion = estudiante.nota >= 6 ? true : false;
+
+        const respuesta = document.getElementById("respuesta");
+
+        condicion
+            ?
+            (respuesta.innerHTML = `${nombre} ${apellido}: Esta aprobado`) :
+            (respuesta.innerHTML = `${nombre} ${apellido}: No esta aprobado`);
+
+        nombre.length === 0 && console.log("ingresar nombre de estudiante");
+
+        const salon = null;
+        console.log(salon || "los alumnos no estan asignados por salon");
+
+        const escuela = {
+            nombreA: "EscuelaUno",
+            nombreB: "EsculaDos",
+            nombreC_Escula: "EsculaTres",
+            nombreD: "EsculaCuatro",
+            nombreE: {
+                distritoUno: "DistritoA",
+                distritoDos: "DistritoB",
+            },
+        };
+
+        let {
+            nombreA,
+            nombreB,
+            nombreC_Escula: EscuelaCinco,
+            nombreD,
+            nombreE: {
+                distritoDos
+            },
+        } = escuela;
+
+        console.log(nombreB);
+        console.log(nombreD);
+        console.log(`Escuela: ${EscuelaCinco}`);
+        console.log(`Escuela: ${nombreA}`);
+        console.log(`Escuela en: ${distritoDos}`);
+
+        const establecimientos = {
+            nombreB,
+            nombreD
+        };
+        console.log(nombreB, nombreD);
+
+        const clases = ["Febrero", "Marzo", "Abril", "Mayo", "Junio"];
+
+        const [mes1, mes2, mes3, mes4] = clases;
+
+        console.log(mes4);
+
+        console.log(...clases)
+
+
         /* ----------------------------------------- Storage and Json -------------------------------------------- */
 
         const guardarLocal = (clave, valor) => {
-            localStorage.setItem(clave, valor)
-        }
+            localStorage.setItem(clave, valor);
+        };
         for (const alumno of alumnos) {
-            guardarLocal(alumno.id, JSON.stringify(alumno))
+            guardarLocal(alumno.id, JSON.stringify(alumno));
         }
         guardarLocal("Nombre", JSON.stringify(alumnos));
-
 
         const aprobadosToJson = JSON.stringify(aprobados);
         console.log(aprobadosToJson);
