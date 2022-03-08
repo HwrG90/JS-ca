@@ -33,7 +33,20 @@ function redondeo(valor) {
 
 let formulario = document.getElementById("formulario");
 formulario.addEventListener("submit", validarFormulario);
-
+/* ---------------------------------------------------------librerias------------------------------------------------------------ */
+const btnCalcular = document.querySelector("#btn");
+btnCalcular.addEventListener("click", function () {
+    Toastify({
+        text: "Calculando!",
+        duration: 3000,
+        gravity: "down",
+        position: "right",
+        style: {
+            background: "linear-gradient(to right, grey,black)",
+        },
+    }).showToast();
+});
+/* ---------------------------------------------------------librerias------------------------------------------------------------ */
 function validarFormulario(e) {
     e.preventDefault();
     console.log("Calculando notas");
@@ -47,13 +60,26 @@ function validarFormulario(e) {
 
         let total = Number(notaUno) + Number(notaDos) + Number(notaTres) / 3;
 
+        /* ---------------------------------------------------------librerias------------------------------------------------------------ */
+
         if (!isNaN(nombre, apellido)) {
-            alert("Ingresar nombres con letras!");
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Ingresar nombres con letras!",
+            });
+
+            /*  alert("Ingresar nombres con letras!"); */
         }
         if (Number.isNaN(notaUno, notaDos, notaTres)) {
-            alert("Ingresar notas numericas!");
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Ingresar notas numericas!",
+            });
+            /* alert("Ingresar notas numericas!"); */
         }
-
+        /* --------------------------------------------------------------------------------------------------------------------------- */
         console.log(
             ` Alumnno  N° ${i}\n Nombre: ${nombre}\n Apellido: ${apellido}\n Nota 1: ${notaUno}\n Nota 2: ${notaDos}\n Nota 3: ${notaTres}\n Nota Final : ${redondeo(
         total / 3
@@ -142,7 +168,7 @@ function validarFormulario(e) {
 
         const establecimientos = {
             nombreB,
-            nombreD
+            nombreD,
         };
         console.log(nombreB, nombreD);
 
@@ -152,8 +178,7 @@ function validarFormulario(e) {
 
         console.log(mes4);
 
-        console.log(...clases)
-
+        console.log(...clases);
 
         /* ----------------------------------------- Storage and Json -------------------------------------------- */
 
