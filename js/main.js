@@ -34,6 +34,13 @@ function redondeo(valor) {
 let formulario = document.getElementById("formulario");
 formulario.addEventListener("submit", validarFormulario);
 /* ---------------------------------------------------------librerias------------------------------------------------------------ */
+moment.locale("es");
+let times = moment().format("llll");
+
+const time = document.getElementById("time");
+time.innerHTML = times;
+console.log(moment(Date.now()).format("MMMM Do YYYY, h:mm:ss a"));
+
 const btnCalcular = document.querySelector("#btn");
 btnCalcular.addEventListener("click", function () {
     Toastify({
@@ -83,7 +90,7 @@ function validarFormulario(e) {
         console.log(
             ` Alumnno  N° ${i}\n Nombre: ${nombre}\n Apellido: ${apellido}\n Nota 1: ${notaUno}\n Nota 2: ${notaDos}\n Nota 3: ${notaTres}\n Nota Final : ${redondeo(
         total / 3
-      )}`
+        )}`
         );
 
         let personas = [

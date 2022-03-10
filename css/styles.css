@@ -95,12 +95,12 @@ input {
   color: black;
 }
 
-label > .fContacto {
+label>.fContacto {
   font-size: 1rem;
   font-family: "Caveat", cursive;
 }
 
-label > .btn {
+label>.btn {
   outline: none;
   border: none;
   cursor: pointer;
@@ -120,6 +120,14 @@ label > .btn {
   font-size: 1rem;
   transform: scale(1.2);
   transition: all 1s;
+}
+
+#time {
+  margin-top: 2rem;
+  margin-left: 60rem;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: capitalize;
 }
 
 /*# sourceMappingURL=styles.css.map */
