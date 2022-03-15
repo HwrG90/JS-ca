@@ -38,7 +38,10 @@ moment.locale("es");
 let times = moment().format("llll");
 
 const time = document.getElementById("time");
-time.innerHTML = times;
+/* setTimeout(() => {
+time.innerHTML = times},1500) */
+setInterval(() => {
+    time.innerHTML = times},1000)
 console.log(moment(Date.now()).format("MMMM Do YYYY, h:mm:ss a"));
 
 const btnCalcular = document.querySelector("#btn");
@@ -67,7 +70,7 @@ function validarFormulario(e) {
 
         let total = Number(notaUno) + Number(notaDos) + Number(notaTres) / 3;
 
-        /* ---------------------------------------------------------librerias------------------------------------------------------------ */
+        /* --------------------------------------------------librerias------------------------------------------------------------ */
 
         if (!isNaN(nombre, apellido)) {
             Swal.fire({
@@ -120,7 +123,8 @@ function validarFormulario(e) {
 
         for (const persona of personas) {
             let li = document.createElement("li");
-            li.innerHTML = persona;
+            setTimeout(() => {
+            li.innerHTML = persona},1500);
             list.appendChild(li);
         }
 
@@ -135,11 +139,11 @@ function validarFormulario(e) {
         const condicion = estudiante.nota >= 6 ? true : false;
 
         const respuesta = document.getElementById("respuesta");
-
+        setTimeout(() => {
         condicion
             ?
             (respuesta.innerHTML = `${nombre} ${apellido}: Esta aprobado`) :
-            (respuesta.innerHTML = `${nombre} ${apellido}: No esta aprobado`);
+            (respuesta.innerHTML = `${nombre} ${apellido}: No esta aprobado`)},1000);
 
         nombre.length === 0 && console.log("ingresar nombre de estudiante");
 
