@@ -2,56 +2,61 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet" />
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
 
     <title>Desafio Js</title>
 </head>
 
 <body>
-    <div id="time">
-
-    </div>
+    <div id="time"></div>
     <h2>Estudiantes</h2>
-    <form action="" name="Formulario" id="formulario">
 
+    <form action="" name="Formulario" id="formulario">
         <div class="form-grup-alumno">
             <label for="nombre:">Nombre:</label>
-            <input class="form-control" id="nombre" type="text" maxlength="10">
+            <input class="form-control" id="nombre" type="text" maxlength="10" />
         </div>
         <div class="form-grup-alumno">
             <label for="apellido:">Apellido:</label>
-            <input class="form-control" id="apellido" type="text" maxlength="10">
+            <input class="form-control" id="apellido" type="text" maxlength="10" />
         </div>
         <div class="form-grup-nota">
             <label for="Nota:">Nota 1:</label>
-            <input class="form-control" id="notaUno" type="text" maxlength="2" required>
-        </div><br>
+            <input class="form-control" id="notaUno" type="text" maxlength="2" required />
+        </div>
+        <br />
         <div class="form-grup-nota">
             <label for="Nota:">Nota 2:</label>
-            <input class="form-control" id="notaDos" type="text" maxlength="2" required>
-        </div><br>
+            <input class="form-control" id="notaDos" type="text" maxlength="2" required />
+        </div>
+        <br />
         <div class="form-grup-nota">
             <label for="Nota:">Nota 3:</label>
-            <input class="form-control" id="notaTres" type="text" maxlength="2" required>
-        </div><br>
+            <input class="form-control" id="notaTres" type="text" maxlength="2" required />
+        </div>
+        <br />
         <label for="Calcular">
-            <input class="btn" type="submit" id="btn" value="Calcular" name="btn"></label>
+            <input class="btn" type="submit" id="btn" value="Calcular" name="btn" /></label>
         <label for="Limpiar formulario">
-            <input class="btn" type="reset" value="Limpiar formulario"></label><br>
-
+            <input class="btn" type="reset" value="Limpiar formulario" /></label><br />
+        <label for="Buscar">
+            <input class="btn" type="submit" id="btnSearch" value="Ver alumnos" name="btn" /></label>
     </form>
     <div id="respuesta"></div>
     <div id="estudiantes"></div>
 
     <main id="alumnos"></main>
+    <footer>
+        <div id="alumnosLista"></div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
     </script>
@@ -67,7 +72,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/locale/es.js"></script>
 
     <script src="./js/main.js"></script>
-
 </body>
 
 </html>

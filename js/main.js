@@ -41,9 +41,50 @@ const time = document.getElementById("time");
 /* setTimeout(() => {
 time.innerHTML = times},1500) */
 setInterval(() => {
-    time.innerHTML = times},1000)
+    time.innerHTML = times;
+}, 1000);
 console.log(moment(Date.now()).format("MMMM Do YYYY, h:mm:ss a"));
 
+/* ------------------------------------------------------Ajax & Fetch---------------------------------------------------------- */
+const mostrarHTML = (aln) => {
+    const alumnosLista = document.querySelector("#alumnosLista");
+
+    let html = "";
+
+    aln.forEach((est) => {
+        const {
+            nombre,
+            apellido,
+            escuela,
+            asignatura
+        } = est;
+        html += `
+        <p> Alumno: ${nombre} ${apellido} </p><br>
+        <p> Asignatuta: ${asignatura}</p> <br>
+        <p> Escuela: ${escuela}</p>
+        <hr/>
+        `;
+    });
+    alumnosLista.innerHTML = html;
+};
+
+const datosEstudiantes = () => {
+    fetch("../data/datos.json")
+        .then((respuesta) => {
+            return respuesta.json();
+        })
+        .then((datos) => {
+            mostrarHTML(datos);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+};
+
+let btnSearch = document.querySelector("#btnSearch");
+btnSearch.addEventListener("click", datosEstudiantes);
+
+/*---------------------------------------------------------------------------------------------------------------- */
 const btnCalcular = document.querySelector("#btn");
 btnCalcular.addEventListener("click", function () {
     Toastify({
@@ -93,7 +134,7 @@ function validarFormulario(e) {
         console.log(
             ` Alumnno  N° ${i}\n Nombre: ${nombre}\n Apellido: ${apellido}\n Nota 1: ${notaUno}\n Nota 2: ${notaDos}\n Nota 3: ${notaTres}\n Nota Final : ${redondeo(
         total / 3
-        )}`
+      )}`
         );
 
         let personas = [
@@ -124,7 +165,8 @@ function validarFormulario(e) {
         for (const persona of personas) {
             let li = document.createElement("li");
             setTimeout(() => {
-            li.innerHTML = persona},1500);
+                li.innerHTML = persona;
+            }, 1500);
             list.appendChild(li);
         }
 
@@ -140,10 +182,11 @@ function validarFormulario(e) {
 
         const respuesta = document.getElementById("respuesta");
         setTimeout(() => {
-        condicion
-            ?
-            (respuesta.innerHTML = `${nombre} ${apellido}: Esta aprobado`) :
-            (respuesta.innerHTML = `${nombre} ${apellido}: No esta aprobado`)},1000);
+            condicion
+                ?
+                (respuesta.innerHTML = `${nombre} ${apellido}: Esta aprobado`) :
+                (respuesta.innerHTML = `${nombre} ${apellido}: No esta aprobado`);
+        }, 1000);
 
         nombre.length === 0 && console.log("ingresar nombre de estudiante");
 

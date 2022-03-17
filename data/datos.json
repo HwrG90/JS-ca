@@ -1,0 +1,24 @@
+[{
+        "id": 1,
+        "nombre": "Alumno",
+        "apellido": "A",
+        "escuela": "EscuelaA",
+        "asignatura": "Literatura"
+    },
+
+    {
+        "id": 2,
+        "nombre": "Alumno",
+        "apellido": "B",
+        "escuela": "EscuelaB",
+        "asignatura": "Matematicas"
+    },
+
+    {
+        "id": 3,
+        "nombre": "Alumno",
+        "apellido": "C",
+        "escuela": "EscuelaC",
+        "asignatura": "Historia"
+    }
+]
