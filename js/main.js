@@ -122,7 +122,7 @@ function validarFormulario(e) {
 
             /*  alert("Ingresar nombres con letras!"); */
         }
-        if (Number.isNaN(notaUno, notaDos, notaTres)) {
+        if (isNaN(notaUno, notaDos, notaTres)) {
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
