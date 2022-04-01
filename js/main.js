@@ -134,7 +134,7 @@ function validarFormulario(e) {
         console.log(
             ` Alumnno  N° ${i}\n Nombre: ${nombre}\n Apellido: ${apellido}\n Nota 1: ${notaUno}\n Nota 2: ${notaDos}\n Nota 3: ${notaTres}\n Nota Final : ${redondeo(
         total / 3
-      )}`
+        )}`
         );
 
         let personas = [
